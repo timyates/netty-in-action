@@ -9,11 +9,5 @@ dependencies {
     compile "com.google.protobuf:protobuf-java:2.5.0"
     compile "org.eclipse.jetty.npn:npn-api:${npnVersion}"
     compile "junit:junit:4.11"
-
     runtime "org.mortbay.jetty.npn:npn-boot:$npnBootVersion"
-}
-
-task runJava( type: JavaExec, dependsOn:[classes] ) {
-    main = 'mypackage.MyClass'
-    classpath = sourceSets.main.runtimeClasspath
 }
